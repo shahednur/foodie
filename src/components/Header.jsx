@@ -50,7 +50,7 @@ const Header = () => {
         }
     }
   return (
-    <header className='fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16'>
+    <header className='fixed z-50 w-screen p-3 px-4 md:p-4 md:px-16 bg-primary'>
         {/* desktop & tablet*/ }
         <div className="hidden md:flex w-full h-full items-center justify-between">
             <Link to={"/"} className="flex items-center gap-2 cursor-pointer">
@@ -93,11 +93,11 @@ const Header = () => {
                     className="w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-9 right-0 px-2 py-2">
                     { user && user.email === "shahednurctg@gmail.com" && (
                         <>
-                        <Link to={"/createItem"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">New Item <MdAdd/></p></Link>
-                        <Link to={"/settings"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Setting <MdSettings/></p></Link>
+                        <Link to={"/createItem"} onClick={()=> setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">New Item <MdAdd/></p></Link>
+                        <Link to={"/settings"}><p onClick={()=>setIsMenu(!isMenu)} className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Setting <MdSettings/></p></Link>
                         </>
                     )}
-                    <Link to={"/profile"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Profile <MdSupervisedUserCircle/></p></Link>
+                    <Link to={"/profile"}><p onClick={()=>setIsMenu(!isMenu)} className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Profile <MdSupervisedUserCircle/></p></Link>
                     <p className="flex items-center justify-center bg-gray-200 px-4 py-2 gap-3 cursor-pointer hover:bg-slate-300 rounded-lg hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base" onClick={ logout }>Logout <MdLogout /></p>
                 </motion.div>
                 )}
@@ -135,15 +135,15 @@ const Header = () => {
                     exit={{opacity: 0, scale: 0.6}}
                     className="w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-9 right-0 px-2 py-2">
                     
-                    <Link to={"/"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Home </p></Link>
-                    <Link to={"/menu"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Menu </p></Link>
-                    <Link to={"/about"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">About </p></Link>
-                    <Link to={"/services"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Service</p></Link>
+                    <Link to={"/"} onClick={()=>setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Home </p></Link>
+                    <Link to={"/menu"} onClick={()=>setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Menu </p></Link>
+                    <Link to={"/about"} onClick={()=>setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">About </p></Link>
+                    <Link to={"/services"} onClick={()=>setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Service</p></Link>
                     { user && user.email === "shahednurctg@gmail.com" && (
                         <>
-                        <Link to={"/createItem"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base border-t border-gray-400">New Item <MdAdd/></p></Link>
-                        <Link to={"/settings"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Setting <MdSettings/></p></Link>
-                        <Link to={"/profile"}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Profile <MdSupervisedUserCircle/></p></Link>
+                        <Link to={"/createItem"} onClick={()=>setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base border-t border-gray-400">New Item <MdAdd/></p></Link>
+                        <Link to={"/settings"} onClick={()=>setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Setting <MdSettings/></p></Link>
+                        <Link to={"/profile"} onClick={()=>setIsMenu(!isMenu)}><p className="flex items-center px-4 py-2 gap-3 cursor-pointer hover:bg-slate-100 hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base">Profile <MdSupervisedUserCircle/></p></Link>
                         <p className="flex items-center justify-center bg-gray-200  px-4 py-2 gap-3 cursor-pointer hover:bg-slate-300 rounded-lg hover:rounded-lg transition-all duration-100 ease-in-out text-textColor text-base" onClick={ logout }>Logout <MdLogout /></p>
                         </>
                     )}

@@ -1,6 +1,8 @@
 import React from 'react'
 import Delivery from '../img/delivery.png'
 import HeroBg from '../img/heroBg.png'
+import { heropData } from '../utils/data'
+
 const HomeContainer = () => {
   return (
     <section id="home" className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full h-auto">
@@ -17,8 +19,28 @@ const HomeContainer = () => {
         <p className="text-base text-textColor md:w-[80%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. At aliquam libero quae excepturi eaque! Explicabo quod obcaecati, deserunt dolor adipisci laboriosam! Officiis maiores consequatur nisi tenetur fugit omnis illum rem!</p>
         <button type="button" className="bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto px-4 py-2 rounded-lg hover:shadow-lg transition-all ease-in-out duration-100">Order Now</button>
       </div>
-      <div className="flex-1 py-2 flex items-center">
+      <div className="flex-1 py-2 flex items-center relative">
         <img src={HeroBg} alt="heroBg" className="lg:h-570 h-370 w-full lg:w-auto ml-auto" />
+
+        <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center lg:px-24 py-2 gap-4 flex-wrap">
+          { heropData && heropData.map((item, index) => {
+            return (
+              <div key={index} className="lg:w-190 p-4 bg-cardOverlay backdrop-blur-md rounded-3xl flex flex-col items-center justify-center drop-shadow-lg">
+            <img src={item.imageSrc} className="w-20 -mt-10 lg:w-40 lg:-mt-20" alt="i1" />
+
+            <p className="text-base lg:text-xl font-semibold text-textColor mt-2 lg:mt-6">
+              {item.name}
+            </p>
+            <p className="text-[12px] lg:text-sm text-lighttextGray font-semibold my-1 lg:my-3">
+              {item.decp}
+            </p>
+            <p className="text-sm font-semibold text-headingColor">
+              <span className="text-xs text-red-600">$</span>{item.price}
+            </p>
+          </div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

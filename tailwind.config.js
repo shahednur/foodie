@@ -42,6 +42,7 @@ module.exports = {
         620: "620px",
       },
       screens:{
+        xs: "576px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
@@ -53,6 +54,8 @@ module.exports = {
         textColor: "#515151",
         cartNumBg: "#e80013",
         primary: "#f5f3f3",
+        cardOverlay:"rgba(256, 256, 256, 0.4)",
+        lighttextGray:'#9ca0ab',
       }
     },
   },
