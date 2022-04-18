@@ -39,63 +39,6 @@ const CartContainer = () => {
                        </motion.div>
                    </div>
                 </div>
-
-                <div className="w-full p-1 px-2 rounded-lg bg-cartItem flex items-center gap-2">
-                   <img className="w-20 h-20 max-w-[60px] rounded-full object-contain" src="https://firebasestorage.googleapis.com/v0/b/foodie-945a3.appspot.com/o/Images%2F1650284553698-f3.png?alt=media&token=35bfc602-ae28-490a-a94e-8724b23719b2" alt="" /> 
-
-                   <div className="flex flex-col gap-2">
-                       <p className="text-base text-gray-50">Chocolate</p>
-                       <p className="text-sm block text-gray-300">$8.4</p>
-                   </div>
-
-                   <div className="group flex items-center gap-2 ml-auto cursor-pointer">
-                       <motion.div whileTap={{ scale: 0.75 }}>
-                            <BiMinus className="text-gray-50" />
-                       </motion.div>
-                       <p className="w-5 h-5 rounded-sm bg-cartBg text-gray-50 flex items-center justify-center">1</p>
-                       <motion.div whileTap={{ scale: 0.75 }}>
-                            <BiPlus className="text-gray-50" />
-                       </motion.div>
-                   </div>
-                </div>
-
-                <div className="w-full p-1 px-2 rounded-lg bg-cartItem flex items-center gap-2">
-                   <img className="w-20 h-20 max-w-[60px] rounded-full object-contain" src="https://firebasestorage.googleapis.com/v0/b/foodie-945a3.appspot.com/o/Images%2F1650284553698-f3.png?alt=media&token=35bfc602-ae28-490a-a94e-8724b23719b2" alt="" /> 
-
-                   <div className="flex flex-col gap-2">
-                       <p className="text-base text-gray-50">Chocolate</p>
-                       <p className="text-sm block text-gray-300">$8.4</p>
-                   </div>
-
-                   <div className="group flex items-center gap-2 ml-auto cursor-pointer">
-                       <motion.div whileTap={{ scale: 0.75 }}>
-                            <BiMinus className="text-gray-50" />
-                       </motion.div>
-                       <p className="w-5 h-5 rounded-sm bg-cartBg text-gray-50 flex items-center justify-center">1</p>
-                       <motion.div whileTap={{ scale: 0.75 }}>
-                            <BiPlus className="text-gray-50" />
-                       </motion.div>
-                   </div>
-                </div>
-
-                <div className="w-full p-1 px-2 rounded-lg bg-cartItem flex items-center gap-2">
-                   <img className="w-20 h-20 max-w-[60px] rounded-full object-contain" src="https://firebasestorage.googleapis.com/v0/b/foodie-945a3.appspot.com/o/Images%2F1650284553698-f3.png?alt=media&token=35bfc602-ae28-490a-a94e-8724b23719b2" alt="" /> 
-
-                   <div className="flex flex-col gap-2">
-                       <p className="text-base text-gray-50">Chocolate</p>
-                       <p className="text-sm block text-gray-300">$8.4</p>
-                   </div>
-
-                   <div className="group flex items-center gap-2 ml-auto cursor-pointer">
-                       <motion.div whileTap={{ scale: 0.75 }}>
-                            <BiMinus className="text-gray-50" />
-                       </motion.div>
-                       <p className="w-5 h-5 rounded-sm bg-cartBg text-gray-50 flex items-center justify-center">1</p>
-                       <motion.div whileTap={{ scale: 0.75 }}>
-                            <BiPlus className="text-gray-50" />
-                       </motion.div>
-                   </div>
-                </div>
             </div>
         </div>
     </div>
