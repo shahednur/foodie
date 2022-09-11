@@ -22,14 +22,14 @@ function App() {
 
   useEffect(() => {
     fetchFoodItems();
-  } , [])
+  } , [foodItems])
   return (
    <AnimatePresence exitBeforeEnter>
     <div className="w-screen h-auto flex flex-col bg-primary">
       <Header />
       <main className="mt-14 md:mt-20 p-8 md:px-16 md:py-4 w-full">
         <Routes>
-          <Route path="/" element={<MainContainer />} />
+          <Route path="/" element={<MainContainer foodItems={foodItems}/>} />
           <Route path="/createItem" element={<CreateContainer />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
