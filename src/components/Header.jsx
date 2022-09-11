@@ -21,7 +21,7 @@ const Header = () => {
         dispatch({
             type: actionType.SET_CART_SHOW,
             cartShow: !cartShow
-        })
+        },[])
     }
 
     const login = async () => {
@@ -81,7 +81,8 @@ const Header = () => {
                 <MdShoppingCart className="text-textColor text-2xl ml-8 cursor-pointer" />
                 { cartItems && cartItems.length >0 && (
                     <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center">
-                        <p className="text-xs text-white font-semibold">{cartItems.length}</p>
+                        {/* <p className="text-xs text-white font-semibold">{cartItems.length}</p> */}
+                        <p className="text-xs text-white font-semibold">0</p>
                     </div>
                 )}
             </div>
@@ -121,7 +122,8 @@ const Header = () => {
                 <MdShoppingCart className="text-textColor text-2xl cursor-pointer" />
                 { cartItems && cartItems.length >0 && (
                     <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center">
-                       <p className="text-xs text-white font-semibold">{cartItems.length}</p>
+                       {/* <p className="text-xs text-white font-semibold">{cartItems.length}</p> */}
+                       <p className="text-xs text-white font-semibold">0</p>
                    </div>
                 )}
             </div>
